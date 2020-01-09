@@ -32,6 +32,6 @@
     "nu-html-checker": "^0.1.0"
   },
   "dependencies": {
-    "superagent": "^3.7.0"
+    "superagent": "^5.0.2"
   }
 }
