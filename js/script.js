@@ -24,7 +24,7 @@ let argComputerMove = getMoveName(randomNumber);
 }
 
 else if(randomNumber == 2){
-  computerMove = 'nożyce';
+  computerMove = 'papier';
 }
 
 else if(randomNumber == 3){
