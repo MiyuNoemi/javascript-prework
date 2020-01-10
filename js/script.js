@@ -10,11 +10,11 @@ if(randomNumber == 1){
 }
 
 else if(randomNumber == '2'){
-  playerMove = 'papier';
+  computerMovee = 'papier';
 }
 
 else if(randomNumber == '3'){
-  playerMove = 'nożyce';
+  computerMove = 'nożyce';
 }
 
 printMessage('Mój ruch to: ' + computerMove);
