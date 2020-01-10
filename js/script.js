@@ -9,11 +9,11 @@ if(randomNumber == 1){
   computerMove = 'kamień';
 }
 
-else if(playerInput == '2'){
+else if(randomNumber == '2'){
   playerMove = 'papier';
 }
 
-else if(playerInput == '3'){
+else if(randomNumber == '3'){
   playerMove = 'nożyce';
 }
 
