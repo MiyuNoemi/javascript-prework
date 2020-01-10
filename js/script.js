@@ -58,31 +58,31 @@ let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.
 
   function displayResult(argComputerMove, argPlayerMove){
  
-  if( argComputerMove == 'kamień' && rgPlayerMove == 'papier'){
+  if( argComputerMove == 'kamień' && argPlayerMove == 'papier'){
     printMessage('Ty wygrywasz!');
   }
 
-  else if ( argComputerMove == `papier` && rgPlayerMove == `nożyce`) {
+  else if ( argComputerMove == `papier` && argPlayerMove == `nożyce`) {
     printMessage(`Ty Wygrywasz!`)
   }
 
-  else if ( argComputerMove == `kamień` && rgPlayerMove == `nożyce`) {
+  else if ( argComputerMove == `kamień` && argPlayerMove == `nożyce`) {
     printMessage(`Ja Wygrywam!`)
   } 
 
-  else if ( argComputerMove == rgPlayerMove) {
+  else if ( argComputerMove == argPlayerMove) {
     printMessage(`Remis!`)
   }
 
- if ( argComputerMove == `kamień` && rgPlayerMove == `nieznany ruch`) {
+ if ( argComputerMove == `kamień` && argPlayerMove == `nieznany ruch`) {
     printMessage(`Spróbuj jeszcze raz`)
   }
 
-  else if ( argComputerMove == `papier` && rgPlayerMove == `nieznany ruch`) {
+  else if ( argComputerMove == `papier` && argPlayerMove == `nieznany ruch`) {
     printMessage(`Spróbuj jeszcze raz`)
   }
 
-  else if ( argComputerMove == `nożyce` && rgPlayerMove == `nieznany ruch`) {
+  else if ( argComputerMove == `nożyce` && argPlayerMove == `nieznany ruch`) {
     printMessage(`Spróbuj jeszcze raz`)
   } 
 
