@@ -24,7 +24,11 @@ let argComputerMove = getMoveName(randomNumber);
 }
 
 else if(randomNumber == 2){
+<<<<<<< HEAD
   computerMove ='papier';
+=======
+  computerMovee = 'papier';
+>>>>>>> 4ac0c8ab6987d583bd5988f501577be06a4e8bb4
 }
 
 else if(randomNumber == 3){
