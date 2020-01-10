@@ -16,6 +16,3 @@ else if(playerInput == '2'){
 else if(playerInput == '3'){
   playerMove = 'nożycze';
 }
-
-printMessage('Mój ruch to: ' + computerMove);
-
