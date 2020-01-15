@@ -1,67 +1,38 @@
 
-function playGame(playerInput){
-  clearMessages();
-
+  function getWinner(player, computer){
+    if(( computer === 'paper' && player === 'rock') || 
+      (computer === 'scissors' && player === 'paper') || 
+      (computer === 'rock' && argPlayerMove == 'scissors')) {
+        return 'computer wins';
+      } else if (computer === player) {
+        return 'draw';
+      } else {
+        return 'player wins';
+      }
+    }
   
-function getMoveName(randomNumber) {
-  if(randomNumber == 1){
-  return 'kamień'
-}
-else if(randomNumber == 2){
-  return 'papier'
-}
-else if(randomNumber ==3){
-  return 'nożyce'
-}
-else 
-return 'nieznany ruch'
+function startRound(playerChoice) {
+  const playerMove = playerChoice;
+  const computerMove = randComputerMove();
+  const winner = getWinner(playerMOve, computerMove);
+  document.querySelector('#messages').innerHTML+=`Round result: ${winner}`
 }
 
-let randomNumber = Math.floor(Math.random() * 3 + 1);
 
-printMessage('Wylosowana liczba to: ' + randomNumber);
-
-let argComputerMove = getMoveName(randomNumber);
-printMessage('Ruch komputera to :' + argComputerMove)
-
-let argplayerMove = getMoveName(playerInput);
-printMessage('Twój ruch to: ' + playerMove); 
-
-  function displayResult(argComputerMove, argPlayerMove){
-    if( argComputerMove == 'kamień' && argPlayerMove == 'papier'){
-    printMessage('Ty wygrywasz!');
-  }
-  else if ( argComputerMove == `papier` && argPlayerMove == `nożyce`) {
-    printMessage(`Ty Wygrywasz!`)
-  }
-  else if ( argComputerMove == `kamień` && argPlayerMove == `nożyce`) {
-    printMessage(`Ja Wygrywam!`)
-  } 
-  else if ( argComputerMove == argPlayerMove) {
-    printMessage(`Remis!`)
-  }
-  else if (
-    argComputerMove == "papier" &&
-    argPlayerMove != 1 &&
-    argPlayerMove != 2 &&
-    argPlayerMove != 3 
-  )
-  {
-    printMessage("Nieznany ruch");
-  }
-  else{
-    printMessage("Ty wygrywasz");
-  }
-}
-  displayResult(argComputerMove, argPlayerMove)
+function randComputerMove() {
+const randomNumber = Math.floor(Math.random() * 3 + 1);
+if(randomNumber === 1) return 'rock';
+else if(randomNumber === 2) return 'paper';
+else if(randomNumber === 3) return 'scissors';
 }
 
-document.getElementById('play-paper').addEventListener('click', function(){
-  playGame(1);
+
+document.querySelector('#play-paper').addEventListener('click', function(){
+  startRound('paper');
 });
-document.getElementById('play-rock').addEventListener('click', function(){
-  playGame(2);
+document.querySelector('#play-rock').addEventListener('click', function(){
+  startRound('rock');
 });
-document.getElementById('play-scissors').addEventListener('click', function(){
-  playGame(3);
+document.querySelector('#play-scissors').addEventListener('click', function(){
+  startRound('scissors');
 });
